@@ -164,6 +164,9 @@ a {
 
 .content {
   padding: 2rem 4rem;
+  @media screen and (max-width: $mobileResolution) {
+    padding: 2rem;
+  }
   h1 {
     color: white;
   }
