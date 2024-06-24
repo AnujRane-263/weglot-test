@@ -1,11 +1,6 @@
 import { AppConstant } from "constant/AppConstant";
-import Document, {
-  DocumentContext,
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from "next/document";
+
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -55,6 +50,19 @@ class MyDocument extends Document {
             content={AppConstant.meta.description}
           />
           <meta name="twitter:image" content={AppConstant.meta.image} />
+          <script 
+            type="text/javascript" 
+            src="https://cdn.weglot.com/weglot.min.js">
+          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                Weglot.initialize({
+                  api_key: 'wg_def8fa3e8e8cd487deee40f24f47a8012'
+                });
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />

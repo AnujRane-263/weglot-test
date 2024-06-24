@@ -6,14 +6,18 @@ import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
   return (
+    
     <Layout className="page-home">
+      
       <Head>
+        
         <title>{AppConstant.meta.title}</title>
         <meta name="description" content={AppConstant.meta.description} />
       </Head>
       <Header />
       <Footer />
     </Layout>
+    
   );
 };
 
